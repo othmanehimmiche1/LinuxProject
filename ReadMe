@@ -1,1 +1,38 @@
-othmane
+Groupe : 
+Othmane Himmiche 
+Nassima El Garn
+
+Explication
+1) Fonctionnalités du programme:
+*Chargement et sauvegarde des tâches :
+Les fonctions load_todos et save_todos sont utilisées pour charger et sauvegarder les tâches dans un fichier todos.json.
+*Création de tâches :
+La fonction create_task permet de créer une nouvelle tâche avec un titre, une date d'échéance, une description et une localisation. Elle utilise jq pour manipuler les données JSON.
+*Mise à jour de tâches :
+La fonction update_task permet de mettre à jour les détails d'une tâche existante, y compris son titre, sa description, sa localisation, sa date d'échéance et son statut de complétion.
+*Suppression de tâches :
+La fonction delete_task permet de supprimer une tâche de la liste en fonction de son ID.
+*Affichage de tâches :
+La fonction show_task affiche les détails d'une tâche spécifique en fonction de son ID.
+*Liste de tâches pour un jour donné :
+La fonction list_tasks affiche les tâches planifiées pour une date spécifique.
+*Recherche de tâches par titre :
+La fonction search_task permet de rechercher des tâches dont le titre contient un mot-clé spécifique.
+*Validation de la date :
+La fonction validate_date vérifie si une date est au format YYYY-MM-DD.
+*Menu interactif :
+La fonction menu est un menu interactif qui permet à l'utilisateur de choisir parmi différentes actions pour gérer sa liste de tâches.
+
+2) Comment les données sont stockées :
+*Les tâches sont stockées dans un fichier au format JSON nommé todos.json.
+*Chaque tâche est représentée par un objet JSON contenant des propriétés telles que l'ID, le titre, la description, la localisation, la date d'échéance et son statut de complétion.
+
+3) Comment le programme est éxécuté :
+*Chargement des fonctions et des données :la première étape consiste à charger toutes les fonctions définies dans le script ainsi que les données stockées dans le fichier todos.json. Cela se fait en appelant la fonction load_todos().
+*Interaction avec l'utilisateur : le programme affiche après un menu interactif à l'utilisateur. Celui-ci lui permet de choisir parmi différentes actions telles que la création de tâches, la mise à jour, la suppression, l'affichage, la recherche, ...
+*Traitement des entrées utilisateur : Après le choix de l'utilisateur dans le menu, le programme traite les entrées utilisateur en fonction de l'action sélectionnée. Par exemple, s'il choisit de créer une tâche, le programme demande les détails de la tâche à créer et les enregistre dans le fichier todos.json.
+*Manipulation des données avec jq : Pour manipuler les données JSON, le programme utilise l'outil jq. Cela implique la création, la mise à jour, la recherche et la suppression d'éléments dans le fichier JSON en fonction des actions demandées par l'utilisateur.
+*Validation des entrées : Avant de procéder à toute opération, le programme valide les entrées utilisateur telles que les dates, les ID des tâches, etc. pour s'assurer qu'elles sont au format attendu et qu'elles sont valides.
+*Affichage des résultats : Après chaque action effectuée par l'utilisateur, le programme affiche des messages de confirmation ou d'erreur pour indiquer le succès ou l'échec de l'opération.
+*Boucle d'exécution du menu : Après avoir traité une action, le programme revient au menu principal pour permettre à l'utilisateur de choisir une nouvelle action ou de quitter le programme.
+*Sauvegarde des données : À chaque modification des données, telles que la création, la mise à jour ou la suppression d'une tâche, le programme sauvegarde les nouvelles données dans le fichier todos.json en appelant la fonction save_todos().
